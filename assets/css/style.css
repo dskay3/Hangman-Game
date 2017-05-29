@@ -19,6 +19,10 @@ body {
     overflow: hidden;
 }
 
+.loading {
+    position: relative;
+}
+
 #bg {
 	-moz-animation: bg 60s linear infinite;
 	-webkit-animation: bg 60s linear infinite;
