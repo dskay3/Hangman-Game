@@ -14,15 +14,10 @@
 
 /*----------------------------------*/
 
-/*background*/
-
-body, 
-bg {
-    overflow: hidden;
-}
-
-.loading {
+/*header background*/
+#wrapper {
     position: relative;
+    overflow: hidden;
 }
 
 #bg {
@@ -48,7 +43,7 @@ bg {
 	left: 0;
 	opacity: 1;
 	position: absolute;
-	top: 100px;
+	top: 30px;
 }
 
 @-moz-keyframes bg {
@@ -120,8 +115,9 @@ bg {
 	width: 6750px;
 }
 
-.blck-bg {
+.header-bg {
     background-color: #000;
+    padding-top: 10px;
 }
 
 /*----------------------------------*/
@@ -129,7 +125,7 @@ bg {
 /*page title*/
 .game-title {
     font-family: 'Hollywood';
-    font-size: 700%;
+    font-size: 650%;
 }
 
 .sub-title {
