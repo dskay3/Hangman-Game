@@ -15,17 +15,19 @@
 /*----------------------------------*/
 
 /*background*/
+body {
+    -moz-overflow: hidden;
+    -webkit-overflow: hidden;
+    -o-overflow: hidden;
+    -ms-overflow: hidden;
+    overflow: hidden;
+}
 body.loading {
     -moz-animation: none !important;
     -webkit-animation: none !important;
     -o-animation: none !important;
     -ms-animation: none !important;
     animation: none !important;
-    -moz-overflow: hidden;
-    -webkit-overflow: hidden;
-    -o-overflow: hidden;
-    -ms-overflow: hidden;
-    overflow: hidden;
 }
 
 #bg {
