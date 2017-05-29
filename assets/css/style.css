@@ -1,0 +1,141 @@
+@charset "utf-8";
+@import url("fonts.css");
+
+/*all elements*/
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-siing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*----------------------------------*/
+
+/*background*/
+body.loading {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+}
+
+#bg {
+	-moz-animation: bg 60s linear infinite;
+	-webkit-animation: bg 60s linear infinite;
+	-ms-animation: bg 60s linear infinite;
+	animation: bg 60s linear infinite;
+
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-moz-transform: translate3d(0,0,0);
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+
+	background: transparent url("../images/bg/film-strip.jpg") bottom left;
+	background-repeat: repeat-x;
+	background-size: 1000px auto;
+	width: 6750px;
+
+	height: 100%;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	top: 100px;
+}
+
+@-moz-keyframes bg {
+	0% {
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	100% {
+		-moz-transform: translate3d(-2250px,0,0);
+		-webkit-transform: translate3d(-2250px,0,0);
+		-ms-transform: translate3d(-2250px,0,0);
+		transform: translate3d(-2250px,0,0);
+	}
+}
+
+@-webkit-keyframes bg {
+	0% {
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	100% {
+		-moz-transform: translate3d(-2250px,0,0);
+		-webkit-transform: translate3d(-2250px,0,0);
+		-ms-transform: translate3d(-2250px,0,0);
+		transform: translate3d(-2250px,0,0);
+	}
+}
+
+@-ms-keyframes bg {
+	0% {
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	100% {
+		-moz-transform: translate3d(-2250px,0,0);
+		-webkit-transform: translate3d(-2250px,0,0);
+		-ms-transform: translate3d(-2250px,0,0);
+		transform: translate3d(-2250px,0,0);
+	}
+}
+
+@keyframes bg {
+	0% {
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		-ms-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+
+	100% {
+		-moz-transform: translate3d(-2250px,0,0);
+		-webkit-transform: translate3d(-2250px,0,0);
+		-ms-transform: translate3d(-2250px,0,0);
+		transform: translate3d(-2250px,0,0);
+	}
+}
+
+.blck-bg {
+    background-color: #000;
+}
+
+/*----------------------------------*/
+
+/*page title*/
+.game-title {
+    font-family: 'Hollywood';
+    font-size: 700%;
+}
+
+.sub-title {
+    font-family: 'Pacifico', cursive;
+    -moz-transform: rotate(-20deg);
+    -ms-transofrm: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+    font-size: 250%;
+    margin-top: -40px;
+    color: #ffff00;
+}
+
