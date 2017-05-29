@@ -21,6 +21,7 @@ body.loading {
     -o-animation: none !important;
     -ms-animation: none !important;
     animation: none !important;
+    overflow: hidden;
 }
 
 #bg {
