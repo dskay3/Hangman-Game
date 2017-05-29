@@ -16,20 +16,16 @@
 
 /*background*/
 body {
-    -moz-overflow: hidden;
-    -webkit-overflow: hidden;
-    -o-overflow: hidden;
-    -ms-overflow: hidden;
     overflow: hidden;
 }
 
-    body.loading * {
+    /*body.loading * {
         -moz-animation: none !important;
         -webkit-animation: none !important;
         -o-animation: none !important;
         -ms-animation: none !important;
         animation: none !important;
-    }
+    }*/
 
 #bg {
 	-moz-animation: bg 60s linear infinite;
