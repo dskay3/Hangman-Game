@@ -15,7 +15,9 @@
 /*----------------------------------*/
 
 /*background*/
-body {
+
+body, 
+bg {
     overflow: hidden;
 }
 
