@@ -19,14 +19,6 @@ body {
     overflow: hidden;
 }
 
-    /*body.loading * {
-        -moz-animation: none !important;
-        -webkit-animation: none !important;
-        -o-animation: none !important;
-        -ms-animation: none !important;
-        animation: none !important;
-    }*/
-
 #bg {
 	-moz-animation: bg 60s linear infinite;
 	-webkit-animation: bg 60s linear infinite;
@@ -45,8 +37,6 @@ body {
 
 	background: transparent url("../images/bg/film-strip.jpg") bottom left;
 	background-repeat: repeat-x;
-	background-size: 1000px auto;
-	width: 6750px;
 
 	height: 100%;
 	left: 0;
@@ -117,6 +107,11 @@ body {
 		-ms-transform: translate3d(-2250px,0,0);
 		transform: translate3d(-2250px,0,0);
 	}
+}
+
+#bg {
+	background-size: 1000px auto;
+	width: 6750px;
 }
 
 .blck-bg {
