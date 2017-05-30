@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div id="header-wrapper">
         <!--background animation-->
         <div id="bg"></div>
 
@@ -36,8 +36,30 @@
         </header>
     </div>
 
+    <!--game section-->
+    <div class="container game-container">
+        <div class="row">
+            <!--left section-->
+            <section class="col-sm-6 game-section">
+                <img src="assets/images/hollywood.jpg" alt="hollywood" title="Hollywood Sign" class="img-fluid hollywood-img">
 
+            </section>
 
+            <!--right section-->
+            <section class="col-sm-6 game-section">
+                <p class="text-center instructions">To get started, press any key on your keyboard!<br><br></p>
+            
+                <p class="wins">Number of wins <i class="fa fa-smile-o happy" aria-hidden="true"></i> :<br></p>
+                <p class="loses">Number of loses <i class="fa fa-frown-o sad" aria-hidden="true"></i> :<br></p>
+                <p class="used-letters">Guessed Letters: <span class="guessed-letters"></span><br></p>
+                
+                <p class="text-center current-word">Current Word: <br></p>
+
+                <p class="current-word"><span class="guess"></span></p>
+
+            </section>
+        </div>
+    </div>
 
 
     <!--bootstrap jquery-->
