@@ -179,6 +179,11 @@ i.sad,
     color: #ff0000;
 }
 
+#guess {
+    font-size: 150%;
+    letter-spacing: 5px;
+}
+
 /*----------------------------------*/
 
 /*image styles*/
