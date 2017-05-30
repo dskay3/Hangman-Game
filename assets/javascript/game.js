@@ -43,12 +43,15 @@ document.onkeyup = function(event) {
 
             // calculates the new currentGuess
             currentGuess = currentGuess.substring(0, j) + userGuess + currentGuess.substring(j + 1);
-        } 
-        
-        // increases incorrect count if wrong guess
-        if (correct === false) {
-            incorrectCount++;
         }
     }
+
+    if (correct == false) {
+        incorrectCount++;
+    }
+
     console.log(currentGuess);
+
+    // resets the correct variable back so that it can assess the new key entered
+    correct = false;
 }
