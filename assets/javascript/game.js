@@ -14,7 +14,7 @@ var compGuess = celebs[Math.floor(Math.random() * celebs.length)];
 // writes blanks depending on length of celeb name
 for(var i = 0; i < compGuess.length; i++) {
     if (compGuess.charAt(i) === ' ') {
-        currentGuess += "\u00A0\u00A0";
+        currentGuess += "\u00A0";
     } else if (compGuess.charAt(i) !== ' ') {
         currentGuess += "_";
     }
@@ -24,9 +24,9 @@ for(var i = 0; i < compGuess.length; i++) {
 var currentGuessElement = document.getElementById("guess");
 currentGuessElement.textContent = currentGuess;
 
-// for developer: provides computer generated celeb name and current guess length
-console.log(compGuess);
-console.log(currentGuess);
+// for developer: writes computer generated celeb name in console and initial blanks
+console.log("Computer Generated: " + compGuess);
+console.log("Initial number of blanks: " + currentGuess);
 
 var correct = false; // initialized value of correct
 var incorrectCount = 0; // incorrect count
@@ -50,8 +50,10 @@ document.onkeyup = function(event) {
         incorrectCount++;
     }
 
-    console.log(currentGuess);
+    // for developer: writes currentGuess outcome to console.
+    console.log("Current guess: " + currentGuess);
 
     // resets the correct variable back so that it can assess the new key entered
     correct = false;
+
 }
