@@ -150,6 +150,7 @@ body {
 .game-container {
     background-color: #000;
     padding-top: 30px;
+    margin-bottom: 200px;
 }
 
 .game-section {
@@ -190,3 +191,22 @@ i.sad,
     padding-bottom: 30px;
 }
 
+/*----------------------------------*/
+
+/*footer styles*/
+.ft-text {
+    color: #d3d3d3;
+    padding-top: 30px;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
