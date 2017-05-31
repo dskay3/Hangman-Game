@@ -166,7 +166,8 @@ body {
 .wins,
 .loses,
 .current-word,
-.used-letters {
+.used-letters,
+.tries {
     color: #FFF;
 }
 
