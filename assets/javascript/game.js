@@ -93,6 +93,9 @@ function hangman() {
         // for developer: writes currentGuess outcome to console.
         console.log("Current guess: " + currentGuess);
 
+        // prints the current guess
+        currentGuessElement.textContent = currentGuess;
+
         // resets the correct variable back so that it can assess the new key entered
         correct = false;
 
@@ -128,6 +131,12 @@ function hangman() {
 
             // prints the number of wins
             numWinsElement.textContent = wins;
+
+            // resets the guessed letters
+            guessedLetters = "";
+
+            // prints the guessed letters reset
+            guessedLettersElement.textContent = guessedLetters;
 
             hangman(); // executes the hangman function
         }
