@@ -8,12 +8,13 @@ var initialTries = 7; // number of tries
     function to play the hangman game
 */
 function hangman() {
+    // array that houses celeb names
     var celebs;
-    celebs = ['jennifer aniston', 'kate beckinsale', 'brad pitt', 'robert downey jr',
-            'ashley greene', 'chris hemsworth', 'angelina jolie', 'gabriel macht',
-            'natalie portman'];
+    celebs = ['jennifer aniston', 'kate beckinsale', 'brad pitt',
+            'robert downey jr', 'ashley greene', 'chris hemsworth', 
+            'angelina jolie', 'gabriel macht', 'natalie portman'];
 
-    var currentGuess = "";
+    var currentGuess = ""; // initialized current guess variable
 
     // randomly chooses a celebrity
     var compGuess = celebs[Math.floor(Math.random() * celebs.length)];
@@ -32,11 +33,12 @@ function hangman() {
     currentGuessElement.textContent = currentGuess;
 
     // for developer: writes computer generated celeb name in console and initial blanks
-    console.log("Computer Generated: " + compGuess);
+    console.log("Computer Generated Answer: " + compGuess);
     console.log("Initial number of blanks: " + currentGuess);
 
     var correct = false; // initialized value of correct
     var incorrectCount = 0; // incorrect count
+    var wonGame = true; // initialized win boolean
 
     // gets the HTML element for numOfTries
     var numOfTriesElement = document.getElementById("numOfTries");
@@ -44,6 +46,10 @@ function hangman() {
     // gets the HTML element for numLoss
     var numLossElement = document.getElementById("numLoss");
 
+    // gets the HTML element for numWins
+    var numWinsElement = document.getElementById("numWins");
+
+    // executes when a key is pressed
     document.onkeyup = function(event) {
         // determines which key was pressed
         var userGuess = event.key;
@@ -80,18 +86,36 @@ function hangman() {
 
         // generates a new word if incorrect count is greater than 7
         if (remainingTries === 0) {
-            // executes the hangman function
-            hangman();
+            hangman(); // executes the hangman function
             
             // resets the numOfTries HTML element
             numOfTriesElement.textContent = initialTries;
 
-            // increases loss by 1
-            loss++;
+            loss++; // increases loss by 1
 
             // prints the number of losses
             numLossElement.textContent = loss;
         }
+
+        // calculates if game is won
+        for(var k = 0; k < currentGuess.length; k++) {
+            if (currentGuess.charAt(k) === '_') {
+                wonGame = false;
+            }
+        }
+
+        // executes when game is won
+        if (wonGame === true) {
+            wins++; // increases wins by 1
+
+            // prints the number of wins
+            numWinsElement.textContent = wins;
+
+            hangman(); // executes the hangman function
+        }
+
+        // resets wonGame variable
+        wonGame = true;
     }
 }
 
