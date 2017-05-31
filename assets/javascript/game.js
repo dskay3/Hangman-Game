@@ -60,7 +60,7 @@ function hangman() {
         // determines which key was pressed
         var userGuess = event.key;
 
-        // calculates the letters guessed
+        // calculates the letters guessed (guessedLetters may need to be removed and the add operation may need to be added somewhere else)
         guessedLetters = guessedLetters + userGuess + " ";
 
         // printsthe guessed letters
