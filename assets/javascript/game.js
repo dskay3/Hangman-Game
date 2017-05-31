@@ -49,10 +49,22 @@ function hangman() {
     // gets the HTML element for numWins
     var numWinsElement = document.getElementById("numWins");
 
+    // gets the HTML element for guessed-letters
+    var guessedLettersElement = document.getElementById("guessed-letters");
+
+    // initialized the guessed letters
+    var guessedLetters = "";
+
     // executes when a key is pressed
     document.onkeyup = function(event) {
         // determines which key was pressed
         var userGuess = event.key;
+
+        // calculates the letters guessed
+        guessedLetters = guessedLetters + userGuess + " ";
+
+        // printsthe guessed letters
+        guessedLettersElement.textContent = guessedLetters;
 
         // runs through each character of celeb name to determine if user guess is correct
         for (var j = 0; j < compGuess.length; j++) {
@@ -86,6 +98,12 @@ function hangman() {
 
         // generates a new word if incorrect count is greater than 7
         if (remainingTries === 0) {
+            // resets the guessed letters
+            guessedLetters = "";
+
+            // prints the guessed letters reset
+            guessedLettersElement.textContent = guessedLetters;
+
             hangman(); // executes the hangman function
             
             // resets the numOfTries HTML element
