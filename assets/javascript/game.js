@@ -17,6 +17,7 @@ function hangman() {
     var currentGuess = ""; // initialized current guess variable
 
     // randomly chooses a celebrity
+    // This should be a separate function
     var compGuess = celebs[Math.floor(Math.random() * celebs.length)];
 
     // writes blanks depending on length of celeb name
@@ -63,7 +64,7 @@ function hangman() {
         // calculates the letters guessed (guessedLetters may need to be removed and the add operation may need to be added somewhere else)
         guessedLetters = guessedLetters + userGuess + " ";
 
-        // printsthe guessed letters
+        // prints the guessed letters
         guessedLettersElement.textContent = guessedLetters;
 
         // runs through each character of celeb name to determine if user guess is correct
@@ -132,11 +133,15 @@ function hangman() {
             // prints the number of wins
             numWinsElement.textContent = wins;
 
-            // resets the guessed letters
-            guessedLetters = "";
 
-            // prints the guessed letters reset
-            guessedLettersElement.textContent = guessedLetters;
+        // prints the current guess
+        currentGuessElement.textContent = currentGuess;
+
+
+
+
+            // resets the numOfTries HTML element
+            numOfTriesElement.textContent = initialTries;
 
             hangman(); // executes the hangman function
         }
